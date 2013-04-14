@@ -4,7 +4,12 @@
 
 <%= link_to "New news post", new_post_path, class: "btn btn-success" %>
 
-<% if @posts %>
+<% if @posts.empty? %>
+  <p class="text-center">
+    There isn't any news to display
+  </p>
+
+<% else %>
   <% @posts.reverse.each do |post| %>
     <div class="post">
       <h2 class="post-title"><%= link_to post.title, post %></h2>
