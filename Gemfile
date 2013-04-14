@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 group :test do
   gem 'shoulda-context'
+  gem 'simplecov', :require => false
 end
 
 # Gems used only for assets and not required
