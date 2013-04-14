@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Boarderline</title>
+  <title>BoarderLine</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="#" class="brand">BoarderLine</a>
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><%= link_to "News", posts_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
+    <footer>
+      <div class="container">
+        BoarderLine <span class="muted">Alpha</span><br />
+        Developed by <a href="http://davblayn.com">David Blayney</a> using the <a href="http://rubyonrails.org">Ruby on Rails</a> web development framework. The source code for this project is available on <a href="https://github.com/davblayn/boarderline">Github</a>
+      </div>
+    </footer>
+  </div>
 
 </body>
 </html>

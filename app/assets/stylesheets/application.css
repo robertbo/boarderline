@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  padding-top: 50px;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: solid 1px #E3E3E3;
+  background-color: #F0F0F0;
+}
+
+.post {
+  border-bottom: solid 1px #CCC;
+  padding: 10px 0;
+}
