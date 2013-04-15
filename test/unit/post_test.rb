@@ -10,11 +10,11 @@ class PostTest < ActiveSupport::TestCase
       assert !post.errors[:title].empty?
     end
 
-    should "contain less than 30 characters" do
+    should "contain less than 100 characters" do
       post = Post.new
       post.content = posts(:one).content
 
-      post.title = "This is a really long title that is longer than 30 characters"
+      post.title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis bibendum nibh mollis lobortis.."
 
       assert !post.save
       assert !post.errors[:title].empty?

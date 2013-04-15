@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  author: David Blayney
-  title: This is a sample title
+  author: "David Blayney"
+  title: "This is a sample title"
   content: "This is some sample content for a post"
