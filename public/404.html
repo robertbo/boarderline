@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
-</head>
+  <head>
+    <style>
+      body {
+        background-color: #EBEBEB;
+        font-family: Helvetica, Arial, sans-serif;
+      }
 
-<body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
-  </div>
-</body>
+      .container {
+        width: 500px;
+        margin: auto;
+        margin-top: 100px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        -moz-box-shadow: 0 0 5px #000000;
+        -webkit-box-shadow: 0 0 5px #000000;
+        box-shadow: 0 0 5px #000000;
+        text-align: center;
+      }
+
+      h1 {
+        text-shadow: 0 -2px rgba(0, 0, 0, 0.6);
+        color: #C7C7C7;
+        font-size: 72px;
+        margin: 10px 0 20px 0;
+      }
+
+      small {
+        color: #969696;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>404 <small>Not found</small></h1>
+      <p>
+        The file you were looking for was not found. It may have been moved or deleted, or the address that you entered may have an error in it
+      </p>
+    </div>
+  </body>
 </html>

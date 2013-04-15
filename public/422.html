@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The change you wanted was rejected (422)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
-</head>
+  <head>
+    <style>
+      body {
+        background-color: #EBEBEB;
+        font-family: Helvetica, Arial, sans-serif;
+      }
 
-<body>
-  <!-- This file lives in public/422.html -->
-  <div class="dialog">
-    <h1>The change you wanted was rejected.</h1>
-    <p>Maybe you tried to change something you didn't have access to.</p>
-  </div>
-</body>
+      .container {
+        width: 500px;
+        margin: auto;
+        margin-top: 100px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        -moz-box-shadow: 0 0 5px #000000;
+        -webkit-box-shadow: 0 0 5px #000000;
+        box-shadow: 0 0 5px #000000;
+        text-align: center;
+      }
+
+      h1 {
+        text-shadow: 0 -2px rgba(0, 0, 0, 0.6);
+        color: #C7C7C7;
+        font-size: 72px;
+        margin: 10px 0 20px 0;
+      }
+
+      small {
+        color: #969696;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>422 <small>Unprocessable Entity</small></h1>
+      <p>
+        Your request was unable to be processed due to semantic errors. This can be caused by trying to change something that you don't have access to
+      </p>
+    </div>
+  </body>
 </html>
