@@ -1,8 +1,9 @@
 <div class="page-header">
-  <h1>All News</h1>
+  <h1>
+    All News
+  <%= link_to "New news post", new_post_path, class: "btn btn-success pull-right" %>
+  </h1>
 </div>
-
-<%= link_to "New news post", new_post_path, class: "btn btn-success" %>
 
 <% if @posts.empty? %>
   <p class="text-center">
