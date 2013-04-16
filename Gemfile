@@ -8,9 +8,10 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 gem 'simple_form'
 
+# Gems only used for testing
 group :test do
   gem 'shoulda-context'
-  gem 'simplecov'
+  gem 'simplecov', :require => false
 end
 
 # Gems used only for assets and not required
