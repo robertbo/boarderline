@@ -10,7 +10,6 @@ gem 'simple_form'
 
 group :test do
   gem 'shoulda-context'
-  gem 'simplecov', :require => false
 end
 
 # Gems used only for assets and not required
