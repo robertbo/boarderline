@@ -1,4 +1,4 @@
-BoarderLine [![Codeship Status for davblayn/boarderline](https://www.codeship.io/projects/89ac3040-8705-0130-9229-22000a9d06df/status?branch=master)](https://www.codeship.io/projects/2571) [![Code Climate](https://codeclimate.com/github/davblayn/boarderline.png)](https://codeclimate.com/github/davblayn/boarderline)
+BoarderLine[![Code Climate](https://codeclimate.com/github/davblayn/boarderline.png)](https://codeclimate.com/github/davblayn/boarderline)
 ===========
 
 Introduction
