@@ -1,4 +1,4 @@
-BoarderLine[![Code Climate](https://codeclimate.com/github/davblayn/boarderline.png)](https://codeclimate.com/github/davblayn/boarderline)
+BoarderLine [![Code Climate](https://codeclimate.com/github/davblayn/boarderline.png)](https://codeclimate.com/github/davblayn/boarderline)
 ===========
 
 Introduction
