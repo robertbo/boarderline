@@ -36,4 +36,4 @@ Development Cycle
     <td>Not started</td>
     <td>Add lunch order system, ready for deployment at CCGS</td>
   </td>
-</table
+</table>
