@@ -8,4 +8,21 @@ BoarderLine
 
 Introduction
 ------------
-BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS. More details on this project will be released as they become available.
+BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS boarding.
+
+Development Cycle
+-----------------
+
+<table>
+  <tr>
+    <th>Stage</th>
+    <th>Status</th>
+    <th>Description</th>
+  </tr>
+  
+  <tr>
+    <td>Alpha</td>
+    <td>Beta</td>
+    <td>v1</td>
+  </tr>
+</table
