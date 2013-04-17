@@ -19,10 +19,21 @@ Development Cycle
     <th>Status</th>
     <th>Description</th>
   </tr>
-  
   <tr>
     <td>Alpha</td>
-    <td>Beta</td>
-    <td>v1</td>
+    <td>In development</td>
+    <td>Working news system with a working admin authentication system</td>
   </tr>
+  
+  <tr>
+    <td>Beta</td>
+    <td>Not started</td>
+    <td>Adds idea management system with a working user authentication system</td>
+  </tr>
+  
+  <tr>
+    <td>v1</td>
+    <td>Not started</td>
+    <td>Add lunch order system, ready for deployment at CCGS</td>
+  </td>
 </table
