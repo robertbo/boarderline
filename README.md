@@ -19,19 +19,19 @@ Development Cycle
     <th>Status</th>
     <th>Description</th>
   </tr>
-  <tr style="background-color: #FFE2BA;">
+  <tr>
     <td>**Alpha**</td>
     <td>In development</td>
     <td>Working news system with a working admin authentication system</td>
   </tr>
   
-  <tr style="background-color: #FFBABA;">
+  <tr>
     <td>**Beta**</td>
     <td>Not started</td>
     <td>Adds idea management system with a working user authentication system</td>
   </tr>
   
-  <tr style="background-color: #FFBABA;">
+  <tr>
     <td>**v1**</td>
     <td>Not started</td>
     <td>Add lunch order system, ready for deployment at CCGS</td>
