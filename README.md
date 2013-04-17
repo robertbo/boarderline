@@ -40,7 +40,7 @@ Development Cycle
   <tr>
     <td><strong>Documentation</strong></td>
     <td>Not started</td>
-    <td>Documentation hosted on the [wiki](https://github.com/davblayn/boarderline/wiki) for this repository</td>
+    <td>Documentation hosted on the <a href="https://github.com/davblayn/boarderline/wiki">wiki</a> for this repository</td>
   </tr>
 
   <tr>
