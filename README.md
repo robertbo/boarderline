@@ -49,3 +49,7 @@ Development Cycle
     <td>Gamma version with added bug fixes etc. Will be deployed to CCGS</td>
   </tr>
 </table>
+
+Documentation
+-------------
+The documentation for BoarderLine will be published on the [wiki](https://github.com/davblayn/boarderline/wiki) for this repository when it is finished.
