@@ -19,3 +19,6 @@
 
 # Ignore Coverage data
 /coverage
+
+# Ignore .c9revisions files
+/.c9revisions
