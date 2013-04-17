@@ -32,8 +32,20 @@ Development Cycle
   </tr>
   
   <tr>
+    <td><strong>Gamma</strong></td>
+    <td>Not started</td>
+    <td>Add lunch order system</td>
+  </tr>
+
+  <tr>
+    <td><strong>Documentation</strong></td>
+    <td>Not started</td>
+    <td>Documentation hosted on the [wiki](https://github.com/davblayn/boarderline/wiki) for this repository</td>
+  </tr>
+
+  <tr>
     <td><strong>v1</strong></td>
     <td>Not started</td>
-    <td>Add lunch order system, ready for deployment at CCGS</td>
-  </td>
+    <td>Gamma version with added bug fixes etc. Will be deployed to CCGS</td>
+  </tr>
 </table>
