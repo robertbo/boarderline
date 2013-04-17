@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'simple_form'
+gem 'devise'
 
 # Gems only used for testing
 group :test do
