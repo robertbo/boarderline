@@ -13,6 +13,7 @@ gem 'devise'
 group :test do
   gem 'shoulda-context'
   gem 'simplecov', :require => false
+  gem 'coveralls', :require => false
 end
 
 # Gems used only for assets and not required
