@@ -26,3 +26,7 @@ footer {
   border-bottom: solid 1px #CCC;
   padding: 10px 0;
 }
+
+.alert {
+  margin-top: 10px;
+}
