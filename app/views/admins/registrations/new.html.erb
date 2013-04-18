@@ -1,17 +1,44 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :required => true %>
-    <%= f.input :password_confirmation, :required => true %>
+<div class="page-header">
+  <h1>Create admin account</h1>
+</div>
+<div class="row">
+  <div class="span6 well">
+    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => "form-horizontal" }) do |f| %>
+      <%= f.error_notification %>
+    
+      <div class="form-inputs">
+        <fieldset>
+          <legend>Name</legend>
+          <%= f.input :first_name, :required => true %>
+          <%= f.input :last_name, :required => true %>
+        </fieldset>
+        <fieldset>
+          <legend>Login details</legend>
+          <%= f.input :email, :required => true %>
+          <%= f.input :password, :required => true %>
+          <%= f.input :password_confirmation, :required => true %>
+        </fieldset>
+      </div>
+    
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up", :class => "btn-primary" %>
+      </div>
+    <% end %>
+  
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  
+  <div class="span5">
+    <p class="lead">
+      Admins are able to manage news posts and ideas
+    </p>
+    
+    <p>
+      This can be by creating new news posts, editing or deleting them. Admins can also give official responses to ideas posted by users, edit those ideas and even delete them if necessary. Make sure that a staff member's details are <strong>accurate</strong> and that their login details are <strong>secure</strong>
+    </p>
+    
+    <p class="text-error">
+      <strong>Never, ever set a staff member's password to the same password they have on Synergetic.</strong> BoarderLine can not guarantee the security of passwords that are kept on this system.
+    </p>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
