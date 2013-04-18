@@ -28,6 +28,14 @@
     <footer>
       BoarderLine <span class="muted">Alpha</span><br />
       Developed by <a href="http://davblayn.com">David Blayney</a> using the <a href="http://rubyonrails.org">Ruby on Rails</a> framework
+      
+      <div class="pull-right admin-links">
+        <% if admin_signed_in? %>
+          Welcome, <%= current_admin.first_name %> (<%= link_to "Log out", destroy_admin_session_path, method: :delete %>)
+        <% else %>
+          <%= link_to "Admin login", new_admin_session_path %>
+        <% end %>
+      </div>
     </footer>
 
 </body>
