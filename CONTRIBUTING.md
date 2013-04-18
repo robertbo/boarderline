@@ -1,6 +1,10 @@
 Contributing to this project
 ============================
 
+>  BoarderLine moves pretty fast. If you don't stop and look around once and a while, you could miss it.
+
+Read more: http://www.quoteworld.org/quotes/2082#ixzz2QoHGWzAX
+
 Introduction
 ------------
 Althouth the source code for this project is available online, pull requests are generally not accepted from people outside of the project unless it fixes a massive bug.
