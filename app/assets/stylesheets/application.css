@@ -20,6 +20,7 @@ footer {
   margin-top: 50px;
   padding: 20px 0;
   border-top: solid 1px #BDBDBD;
+  clear: both;
 }
 
 .post {
