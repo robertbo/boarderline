@@ -2,6 +2,7 @@ Boarderline::Application.routes.draw do
   devise_for :admins
 
   root :to => "home#index"
+  get 'news', to:'posts#index', as: :news
   resources :posts
 
 
