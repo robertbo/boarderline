@@ -5,5 +5,5 @@ class Post < ActiveRecord::Base
                     length: { maximum: 100 }
 
   validates :content, presence: true,
-                      length: { minimum: 20 }
+                    length: { minimum: 20 }
 end
