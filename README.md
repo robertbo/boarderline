@@ -1,5 +1,6 @@
 # BoarderLine
 
+## Code status
 [![Build Status](https://travis-ci.org/davblayn/boarderline.png)](https://travis-ci.org/davblayn/boarderline)
 [![Coverage Status](https://coveralls.io/repos/davblayn/boarderline/badge.png?branch=master)](https://coveralls.io/r/davblayn/boarderline)
 [![Dependency Status](https://gemnasium.com/davblayn/boarderline.png)](https://gemnasium.com/davblayn/boarderline)
