@@ -1,6 +1,4 @@
 # BoarderLine
-
-## Introduction
 BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS boarding.
 
 ## Code status
