@@ -35,7 +35,7 @@ BoarderLine is a work in progress, and when it is finished it will be an intrane
   <tr>
     <td><strong>Documentation</strong></td>
     <td>Not started</td>
-    <td>Documentation hosted on the <a href="https://github.com/davblayn/boarderline/wiki">wiki</a> for this repository</td>
+    <td>Printed documentation provided to ICT Services</td>
   </tr>
 
   <tr>
