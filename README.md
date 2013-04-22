@@ -16,19 +16,19 @@ BoarderLine is a work in progress, and when it is finished it will be an intrane
     <th>Description</th>
   </tr>
   <tr>
-    <td><strong>Alpha</strong></td>
+    <td><strong>Alpha</strong> (v0.2.0)</td>
     <td>In development</td>
     <td>News system with an admin authentication system</td>
   </tr>
   
   <tr>
-    <td><strong>Beta</strong></td>
+    <td><strong>Beta</strong> (v0.3.0)</td>
     <td>Not started</td>
     <td>Adds idea management system with a working user authentication system</td>
   </tr>
   
   <tr>
-    <td><strong>Gamma</strong></td>
+    <td><strong>Gamma</strong> (v0.4.0)</td>
     <td>Not started</td>
     <td>Adds lunch order system</td>
   </tr>
@@ -40,7 +40,7 @@ BoarderLine is a work in progress, and when it is finished it will be an intrane
   </tr>
 
   <tr>
-    <td><strong>v1</strong></td>
+    <td><strong>v1.0.0</strong></td>
     <td>Not started</td>
     <td>First version to be deployed to CCGS</td>
   </tr>
