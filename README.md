@@ -2,6 +2,7 @@
 BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS boarding.
 
 ## Code status
+[ ![Codeship Status for davblayn/boarderline](https://www.codeship.io/projects/71766310-8d8f-0130-8f60-1231381d7ba5/status?branch=master)](https://www.codeship.io/projects/2809)
 [![Dependency Status](https://gemnasium.com/davblayn/boarderline.png)](https://gemnasium.com/davblayn/boarderline)
 [![Code Climate](https://codeclimate.com/github/davblayn/boarderline.png)](https://codeclimate.com/github/davblayn/boarderline)
 
