@@ -2,7 +2,6 @@
 BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS boarding.
 
 ## Code status
-[![Build Status](https://travis-ci.org/davblayn/boarderline.png)](https://travis-ci.org/davblayn/boarderline)
 [![Dependency Status](https://gemnasium.com/davblayn/boarderline.png)](https://gemnasium.com/davblayn/boarderline)
 [![Code Climate](https://codeclimate.com/github/davblayn/boarderline.png)](https://codeclimate.com/github/davblayn/boarderline)
 
