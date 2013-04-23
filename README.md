@@ -1,4 +1,4 @@
-# BoarderLine [![Build Status](https://drone.io/github.com/davblayn/boarderline/status.png)](https://drone.io/github.com/davblayn/boarderline/latest) [![Dependency Status](https://gemnasium.com/davblayn/boarderline.png)](https://gemnasium.com/davblayn/boarderline) [![Code Climate](https://codeclimate.com/github/davblayn/boarderline.png)](https://codeclimate.com/github/davblayn/boarderline)
+# BoarderLine [![Build Status](https://drone.io/github.com/davblayn/boarderline/status.png)](https://drone.io/github.com/davblayn/boarderline/latest)
 
 BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS boarding.
 
