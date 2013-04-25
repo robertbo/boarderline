@@ -4,7 +4,7 @@
 Althouth the source code for this project is available online, pull requests are generally not accepted from people outside of the project unless it fixes a massive bug.
 
 ## Testing
-As this is a Rails app, it is important that new features are tested (this is done through [Travis-CI](http://travis-ci.org)) to prevent bugs from being introduced. [Shoulda](https://github.com/thoughtbot/shoulda) is used for testing, so instead of running tests like...
+As this is a Rails app, it is important that new features are tested (this is done through [Drone](http://drone.io)) to prevent bugs from being introduced. [Shoulda](https://github.com/thoughtbot/shoulda) is used for testing, so instead of running tests like...
 
 ``` ruby
 test "a user can post a status update when signed in" do
