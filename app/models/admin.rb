@@ -13,4 +13,9 @@ class Admin < ActiveRecord::Base
   validates :first_name, presence: true
   
   validates :last_name, presence: true
+
+  validates :email, format: {
+                      with: /ccgs\.wa\.edu\.au$/,
+                      message: "must be a school email address."
+                    }
 end

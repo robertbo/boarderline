@@ -25,3 +25,6 @@
 
 # Ignore Bundler binstubs
 /bin
+
+# Ignore Vim swap files
+*swp
