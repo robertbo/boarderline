@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminTest < ActiveSupport::TestCase
-  context "when adding an admin account" do
+  context "a new admin" do
     should "enter a first name" do
       admin = Admin.new
       assert !admin.save
@@ -27,6 +27,13 @@ class AdminTest < ActiveSupport::TestCase
       assert !admin.save
       assert !admin.errors[:email].empty?
       assert admin.errors[:email].include?("must be a school email address.")
+    end
+
+    should "be able to sign up with a valid email address" do
+      admin = Admin.new(first_name: 'David', last_name: 'Blayney', email: 'davblayn@ccgs.wa.edu.au')
+      admin.password = admin.password_confirmation = "password-asdf"
+
+      assert admin.valid?
     end
   end
 end
