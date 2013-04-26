@@ -35,5 +35,13 @@ class AdminTest < ActiveSupport::TestCase
 
       assert admin.valid?
     end
+
+    should "now be allowed to sign up with an email that ony *contains* 'ccgs.wa.edu.au'" do
+      admin = Admin.new
+      admin.email = "david.ccgs.wa.edu.au@gmail.com"
+
+      assert !admin.save
+      assert !admin.errors[:email].empty?
+    end
   end
 end
