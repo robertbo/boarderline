@@ -9,6 +9,10 @@ gem 'sqlite3'
 gem 'simple_form'
 gem 'devise'
 
+gem 'redcarpet', '1.17.2'
+gem 'albino'
+gem 'nokogiri'
+
 # Gems only used for testing
 group :test do
   gem 'shoulda-context'
