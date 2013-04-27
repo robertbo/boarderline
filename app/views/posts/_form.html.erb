@@ -13,8 +13,8 @@
     <% end %>
 
     <%= f.input :author %>
-    <%= f.input :title, :input_html => {:class=> 'input-xxlarge'} %>
-    <%= f.input :content, :input_html => {:class=> 'input-xxlarge'} %>
+    <%= f.input :title, :input_html => {:class=> 'input-xxlarge', :placeholder => "Must be less than 100 characters"} %>
+    <%= f.input :content, :input_html => {:class=> 'input-xxlarge', :placeholder => "Must be at least 20 characters"} %>
 
     <div class="form-actions">
       <%= f.button :submit, :class => "btn-primary" %>

@@ -14,7 +14,7 @@
         </fieldset>
         <fieldset>
           <legend>Login details</legend>
-          <%= f.input :email, :required => true %>
+          <%= f.input :email, :required => true, :input_html => { :placeholder => "Must be a school email address" } %>
           <%= f.input :password, :required => true %>
           <%= f.input :password_confirmation, :required => true %>
         </fieldset>
