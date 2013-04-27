@@ -1,5 +1,5 @@
 Boarderline::Application.routes.draw do
-  get "help/markdown"
+  get "help/markdown", as: :markdown_help
 
   devise_for :admins
 
