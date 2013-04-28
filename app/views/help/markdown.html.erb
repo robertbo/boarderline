@@ -1,0 +1,73 @@
+<div class="page-header">
+  <h1>Markdown</h1>
+</div>
+
+<p class="lead">
+  Markdown is used to format news posts
+</p>
+<p>
+  When you visit a news article, BoarderLine converts the formatting information that was entered when the post was created, and converts it to HTML so a web browser can understand it. For example, <code>**Hello**, I'm writing *Markdown*</code> is converted to <code>&lt;strong&gt;Hello&lt;/strong&gt;, I'm writing &lt;em&gt;Markdown&lt;/em&gt;</code>
+</p>
+<p>
+  Markdown is only shown in the "show news post" page, not the page that lists all of the posts, so it is advisable to refrain from using Markdown in the first 150 characters.
+</p>
+
+<div class="row">
+  <div class="span6">
+  <h2>Markdown entered</h2>
+    <pre>
+      First level header
+      =================
+
+      Second level header
+      -------------------
+
+      **Bold text**
+
+      *Italic text*
+
+      * Unordered...
+      * List
+
+      1. Ordered...
+      2. List
+
+      &lt;http://google.com&gt; (link without text)
+
+      [Link with text](http://google.com)
+
+      ```
+      #block of code
+      ```
+
+      &gt; Quote
+
+      \*Excape characters with backslash\*
+    </pre>
+  </div>
+
+  <div class="span6">
+    <h2>Returned HTML</h2>
+    <div class="well">
+      <h1>First level header</h1>
+      <h2>Second level header</h2>
+      <p><strong>Bold text</strong></p>
+      <p><em>Italic text</em></p>
+      <ul>
+        <li>Unordered...</li>
+        <li>List</li>
+      </ul>
+      <ol>
+        <li>Ordered...</li>
+        <li>List</li>
+      </ol>
+      <p><a href="http://google.com">http://google.com</a> (link without text)</p>
+      <p><a href="http://google.com">Link with text</a></p>
+      <pre>
+        #block of code
+      </pre>
+      <blockquote>Quote</blockquote>
+      *Escape characters with backslash*
+    </div>
+  </div>
+</div>
