@@ -28,3 +28,6 @@
 
 # Ignore Vim swap files
 *swp
+
+# Ignore .redcar files
+/.redcar
