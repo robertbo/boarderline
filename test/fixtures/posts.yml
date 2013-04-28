@@ -4,3 +4,8 @@ one:
   author: "David Blayney"
   title: "This is a sample title"
   content: "This is some sample content for a post"
+  
+two:
+  author: "John Smith"
+  title: "The launch of BoarderLine Alpha"
+  content: "Boarderline Alpha has been released and can be tested online"
