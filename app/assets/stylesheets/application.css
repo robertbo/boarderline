@@ -28,6 +28,11 @@ footer {
   padding: 10px 0;
 }
 
+.post-last {
+  border-bottom: none;
+  padding: 0;
+}
+
 .alert {
   margin-top: 10px;
 }

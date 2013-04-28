@@ -11,11 +11,15 @@
   </p>
 
 <% else %>
-  <% @posts.reverse.each do |post| %>
-    <div class="post">
-      <h2 class="post-title"><%= link_to post.title, post %></h2>
-      <p>By <%= post.author %> - Posted <%= time_ago_in_words(post.created_at) %> ago</p>
-      <p><%= markdown(truncate(post.content, :length => 150)) %> <%= link_to "Read entire post", post %></p>
-    </div>
+  <% @posts.reverse.each_with_index do |post, index| %>
+    <% if index + 1 == @posts.length %>
+      <div class="post post-last">
+    <% else %>
+      <div class="post">
+    <% end %>
+        <h2 class="post-title"><%= link_to post.title, post %></h2>
+        <p>By <%= post.author %> - Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+        <p><%= markdown(truncate(post.content, :length => 150)) %> <%= link_to "Read entire post", post %></p>
+      </div>
   <% end %>
 <% end %>
