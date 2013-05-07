@@ -1,4 +1,4 @@
-# BoarderLine [![Build Status](https://drone.io/bitbucket.org/davblayn/ccgs-boarderline/status.png)](https://drone.io/bitbucket.org/davblayn/ccgs-boarderline/latest)
+# BoarderLine [![Build Status](https://drone.io/github.com/davblayn/boarderline/status.png)](https://drone.io/github.com/davblayn/boarderline/latest)
 BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS boarding.
 
 ## Documentation
