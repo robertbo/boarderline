@@ -1,4 +1,6 @@
 Boarderline::Application.routes.draw do
+  devise_for :users
+
   get "help/markdown", as: :markdown_help
 
   root :to => "home#index"
