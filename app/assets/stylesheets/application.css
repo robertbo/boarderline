@@ -11,6 +11,16 @@
  *= require_self
  *= require_tree .
  */
+ 
+::selection {
+  background-color: rgb(0, 127, 255);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: rgb(0, 127, 255);
+  color: white;
+}
 
 body {
   padding-top: 60px;
