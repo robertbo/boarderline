@@ -9,13 +9,14 @@
 
       <div class="form-inputs">
         <fieldset>
-          <legend>Verify current password</legend>
-          <%= f.input :current_password, :hint => "Enter you password even if you haven't changed it", :required => true %>
-        </fieldset>
-
-        <fieldset>
           <legend>Change email</legend>
           <%= f.input :email, :required => true, :autofocus => true %>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Change password</legend>
+          <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+          <%= f.input :password_confirmation, :required => false %>
         </fieldset>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -24,12 +25,13 @@
       </div>
     </div>
     <div class="span6">
-      <div class="form-inputs">
-        <fieldset>
-          <legend>Change password</legend>
-          <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-          <%= f.input :password_confirmation, :required => false %>
-        </fieldset>
+      <div class="well">
+        <div class="form-inputs">
+          <fieldset>
+            <legend>Verify current password</legend>
+            <%= f.input :current_password, :hint => "Enter you password even if you haven't changed it", :required => true %>
+          </fieldset>
+        </div>
       </div>
     </div>
   </div>
