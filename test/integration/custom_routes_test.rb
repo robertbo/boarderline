@@ -13,5 +13,15 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
       get '/register'
       assert_response :success
     end
+    
+    should "display login page on /login" do
+      get '/login'
+      assert_response :success
+    end
+    
+    should "log user out on /logout" do
+      get '/logout'
+      assert_response :success
+    end
   end
 end
