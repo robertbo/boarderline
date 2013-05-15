@@ -20,5 +20,19 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
         assert_response :success
       end
     end
+    
+    context "when logged in" do # This code will only assert a redirection as the sign_in helper does not work in integration tests
+      should "redirect to root on /logout" do
+        get '/logout'
+        assert_response :redirect
+        assert_redirected_to :root
+      end
+      
+      should "redirect to root on /account" do
+        get '/account'
+        assert_response :redirect
+        assert_redirected_to :new_user_session
+      end
+    end
   end
 end
