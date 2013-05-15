@@ -4,6 +4,7 @@ Boarderline::Application.routes.draw do
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
+    get 'account', to: 'devise/registrations#edit', as: :account
     get 'logout', to: 'devise/sessions#destroy', as: :logout, method: :destroy
   end
 
