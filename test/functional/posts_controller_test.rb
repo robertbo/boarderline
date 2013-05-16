@@ -10,8 +10,15 @@ class PostsControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:posts)
   end
+  
+  test "should be redirected when not logged in" do
+    get :new
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
 
-  test "should get new" do
+  test "should get new when logged in" do
+    sign_in users(:david)
     get :new
     assert_response :success
   end
