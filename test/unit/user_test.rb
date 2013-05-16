@@ -30,14 +30,14 @@ class UserTest < ActiveSupport::TestCase
     end
     
     should "be able to sign up with a valid email address" do
-        user = User.new
-        user.first_name = users(:david).first_name
-        user.last_name = users(:david).last_name
-        user.password = 'password'
-        user.email = "test2@ccgs.wa.edu.au"
-        
-        assert user.save
-        assert user.errors[:email].empty?
-      end
+      user = User.new
+      user.first_name = users(:david).first_name
+      user.last_name = users(:david).last_name
+      user.password = 'password'
+      user.email = "test2@ccgs.wa.edu.au"
+      
+      assert user.save
+      assert user.errors[:email].empty?
+    end
   end
 end
