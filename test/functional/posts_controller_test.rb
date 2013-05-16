@@ -11,7 +11,7 @@ class PostsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:posts)
   end
   
-  test "should be redirected when not logged in" do
+  test "should be redirected when visiting new while not logged in" do
     get :new
     assert_response :redirect
     assert_redirected_to new_user_session_path
@@ -42,13 +42,25 @@ class PostsControllerTest < ActionController::TestCase
     get :show, id: @post
     assert_response :success
   end
+  
+  test "should be redirected when visiting edit while not logged in" do
+    get :edit, id: @post
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
 
-  test "should get edit" do
+  test "should get edit when user signed in" do
+    sign_in users(:david)
     get :edit, id: @post
     assert_response :success
   end
+  
+  test "should redirect post update when not signed in" do
+    put :update, id: @post, post: { title: @post.title, content: @post.title }
+  end
 
-  test "should update post" do
+  test "should update post when user signed in" do
+    sign_in users(:david)
     put :update, id: @post, post: { author: @post.author, content: @post.content, title: @post.title }
     assert_redirected_to post_path(assigns(:post))
   end
