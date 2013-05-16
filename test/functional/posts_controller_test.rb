@@ -22,8 +22,15 @@ class PostsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  
+  test "should be logged in to post a news post" do
+    post :create, post: { title: "Boarders are now banned from Claremont leave", content: "Hello, this is a test post for the sake of testing the posts controller" }
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
 
-  test "should create post" do
+  test "should create post when logged in" do
+    sign_in users(:david)
     assert_difference('Post.count') do
       post :create, post: { author: @post.author, content: @post.content, title: @post.title }
     end
