@@ -19,5 +19,25 @@ class UserTest < ActiveSupport::TestCase
       assert !user.save
       assert !user.errors[:email].empty?
     end
+    
+    should "enter a school email address" do
+      user = User.new
+      user.email = "test@example.com"
+      
+      assert !user.save
+      assert !user.errors[:email].empty?
+      assert user.errors[:email].include?("must be a school email address")
+    end
+    
+    should "be able to sign up with a valid email address" do
+        user = User.new
+        user.first_name = users(:david).first_name
+        user.last_name = users(:david).last_name
+        user.password = 'password'
+        user.email = "test2@ccgs.wa.edu.au"
+        
+        assert user.save
+        assert user.errors[:email].empty?
+      end
   end
 end

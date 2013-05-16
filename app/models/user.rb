@@ -13,6 +13,11 @@ class User < ActiveRecord::Base
   
   validates :last_name, :presence => true
   
+  validates :email, format: {
+                      with: /ccgs\.wa\.edu\.au$/,
+                      message: "must be a school email address"
+                    }
+  
   def full_name
     first_name + " " + last_name
   end
