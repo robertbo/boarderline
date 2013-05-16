@@ -8,7 +8,8 @@ Boarderline::Application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy', as: :logout, method: :destroy
   end
 
-  get "help/markdown", as: :markdown_help
+  get 'help/markdown', as: :markdown_help
+  get 'help/welcome', as: :welcome_help
 
   root :to => "home#index"
   get 'news', to:'posts#index', as: :news
