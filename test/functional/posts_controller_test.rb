@@ -32,7 +32,7 @@ class PostsControllerTest < ActionController::TestCase
   test "should create post when logged in" do
     sign_in users(:david)
     assert_difference('Post.count') do
-      post :create, post: { author: @post.author, content: @post.content, title: @post.title }
+      post :create, post: { user_id: @post.user_id, content: @post.content, title: @post.title }
     end
 
     assert_redirected_to post_path(assigns(:post))
@@ -61,7 +61,7 @@ class PostsControllerTest < ActionController::TestCase
 
   test "should update post when user signed in" do
     sign_in users(:david)
-    put :update, id: @post, post: { author: @post.author, content: @post.content, title: @post.title }
+    put :update, id: @post, post: { user_id: @post.user_id, content: @post.content, title: @post.title }
     assert_redirected_to post_path(assigns(:post))
   end
 
