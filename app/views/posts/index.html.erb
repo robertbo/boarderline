@@ -20,7 +20,7 @@
       <div class="post">
     <% end %>
         <h2 class="post-title"><%= link_to post.title, post %></h2>
-        <p>By <%= post.author %> - Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+        <p>By Author - Posted <%= time_ago_in_words(post.created_at) %> ago</p>
         <p><%= markdown(truncate(post.content, :length => 150)) %> <%= link_to "Read entire post", post %></p>
       </div>
   <% end %>
