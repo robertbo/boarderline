@@ -32,10 +32,20 @@ class PostsControllerTest < ActionController::TestCase
   test "should create post when logged in" do
     sign_in users(:admin1)
     assert_difference('Post.count') do
-      post :create, post: { user_id: @post.user_id, content: @post.content, title: @post.title }
+      post :create, post: { content: @post.content, title: @post.title }
     end
 
     assert_redirected_to post_path(assigns(:post))
+  end
+  
+  test "should create post for current user when logged in" do
+    sign_in users(:admin1)
+    assert_difference('Post.count') do
+      post :create, post: { user_id: users(:admin2).id, content: @post.content, title: @post.title }
+    end
+
+    assert_redirected_to post_path(assigns(:post))
+    assert_equal assigns(:post).user_id, users(:admin1).id
   end
 
   test "should show post" do
@@ -61,8 +71,22 @@ class PostsControllerTest < ActionController::TestCase
 
   test "should update post when user signed in" do
     sign_in users(:admin1)
-    put :update, id: @post, post: { user_id: @post.user_id, content: @post.content, title: @post.title }
+    put :update, id: @post, post: { content: @post.content, title: @post.title }
     assert_redirected_to post_path(assigns(:post))
+  end
+  
+  test "should update post for current user when user signed in" do
+    sign_in users(:admin1)
+    put :update, id: @post, post: { user_id: users(:admin2).id, content: @post.content, title: @post.title }
+    assert_redirected_to post_path(assigns(:post))
+    assert_equal assigns(:post).user_id, users(:admin1).id
+  end
+  
+  test "should not update post if nothing has changed" do
+    sign_in users(:admin1)
+    put :update, id: @post
+    assert_redirected_to post_path(assigns(:post))
+    assert_equal assigns(:post).user_id, users(:admin1).id
   end
   
   test "should redirect to login page when destroying post while not signed in" do
