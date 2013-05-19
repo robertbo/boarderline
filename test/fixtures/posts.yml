@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  user_id: "David Blayney"
+  user_id: 1
   title: "This is a sample title"
   content: "This is some sample content for a post"
   
 two:
-  user_id: "John Smith"
+  user_id: 2
   title: "The launch of BoarderLine Alpha"
   content: "Boarderline Alpha has been released and can be tested online"

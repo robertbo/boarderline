@@ -3,3 +3,9 @@ david:
   first_name: David
   last_name: Blayney
   email: test@ccgs.wa.edu.au
+  
+john:
+  id: 2
+  first_name: John
+  last_name: Smith
+  email: jsmith@ccgs.wa.edu.au
