@@ -1,7 +1,9 @@
 <div class="page-header">
   <h1>
     All News
-  <%= link_to "New news post", new_post_path, class: "btn btn-success pull-right" %>
+    <% if user_signed_in? %>
+      <%= link_to "New news post", new_post_path, class: "btn btn-success pull-right" %>
+    <% end %>
   </h1>
 </div>
 
@@ -18,7 +20,7 @@
       <div class="post">
     <% end %>
         <h2 class="post-title"><%= link_to post.title, post %></h2>
-        <p>By <%= post.author %> - Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+        <p><strong>By <%= post.user.full_name %> - Posted <%= time_ago_in_words(post.created_at) %> ago</strong></p>
         <p><%= markdown(truncate(post.content, :length => 150)) %> <%= link_to "Read entire post", post %></p>
       </div>
   <% end %>

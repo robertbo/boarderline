@@ -1,0 +1,11 @@
+admin1:
+  id: 1
+  first_name: David
+  last_name: Blayney
+  email: test@ccgs.wa.edu.au
+  
+admin2:
+  id: 2
+  first_name: John
+  last_name: Smith
+  email: jsmith@ccgs.wa.edu.au

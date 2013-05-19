@@ -5,4 +5,9 @@ class HelpControllerTest < ActionController::TestCase
     get :markdown
     assert_response :success
   end
+  
+  test "should get welcome" do
+    get :welcome
+    assert_response :success
+  end
 end
