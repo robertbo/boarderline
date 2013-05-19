@@ -1,6 +1,6 @@
 # Change Log
 
-## v0.2.0 (May 19, 2013)
+## [v0.2.0 (May 19, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.0)
 * Create user authentication system
 * Update front-end for authentication system
   * Login
