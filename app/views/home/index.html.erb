@@ -1,2 +1,27 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+  <div class="span8">
+    <% if user_signed_in? %>
+      <h2>Welcome back, <%= current_user.first_name %></h2>
+    <% else %>
+      <h2>Keep track of what's happening in boarding, with BoarderLine</h2>
+    <% end %>
+  </div>
+  
+  <div class="span4">
+    <div class="well">
+      <% if !user_signed_in? %>
+        <fieldset>
+          <legend>Log in</legend>
+          <%= simple_form_for("user", :url => user_session_path) do |f| %>
+            <%= f.input :email, :input_html => { :class => 'input-block-level' } %>
+            <%= f.input :password, :input_html => { :class => 'input-block-level' } %>
+            <%= f.button :submit, "Log in", :class => "btn-primary" %>
+          <% end %>
+      </fieldset>
+      <% else %>
+        <p class="lead">You are currently signed in as <%= current_user.full_name %></p>
+        <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong></p>
+      <% end %>
+    </div>
+  </div>
+</div>
