@@ -18,7 +18,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should get new when logged in" do
-    sign_in users(:david)
+    sign_in users(:admin1)
     get :new
     assert_response :success
   end
@@ -30,7 +30,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should create post when logged in" do
-    sign_in users(:david)
+    sign_in users(:admin1)
     assert_difference('Post.count') do
       post :create, post: { user_id: @post.user_id, content: @post.content, title: @post.title }
     end
@@ -50,7 +50,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should get edit when user signed in" do
-    sign_in users(:david)
+    sign_in users(:admin1)
     get :edit, id: @post
     assert_response :success
   end
@@ -60,7 +60,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should update post when user signed in" do
-    sign_in users(:david)
+    sign_in users(:admin1)
     put :update, id: @post, post: { user_id: @post.user_id, content: @post.content, title: @post.title }
     assert_redirected_to post_path(assigns(:post))
   end
@@ -72,7 +72,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should destroy post when user signed in" do
-    sign_in users(:david)
+    sign_in users(:admin1)
     assert_difference('Post.count', -1) do
       delete :destroy, id: @post
   end

@@ -31,8 +31,8 @@ class UserTest < ActiveSupport::TestCase
     
     should "be able to sign up with a valid email address" do
       user = User.new
-      user.first_name = users(:david).first_name
-      user.last_name = users(:david).last_name
+      user.first_name = users(:admin1).first_name
+      user.last_name = users(:admin1).last_name
       user.password = 'password'
       user.email = "test2@ccgs.wa.edu.au"
       
