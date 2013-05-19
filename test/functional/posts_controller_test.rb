@@ -64,11 +64,18 @@ class PostsControllerTest < ActionController::TestCase
     put :update, id: @post, post: { user_id: @post.user_id, content: @post.content, title: @post.title }
     assert_redirected_to post_path(assigns(:post))
   end
+  
+  test "should redirect to login page when destroying post while not signed in" do
+    delete :destroy, id: @post
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
 
-  test "should destroy post" do
+  test "should destroy post when user signed in" do
+    sign_in users(:david)
     assert_difference('Post.count', -1) do
       delete :destroy, id: @post
-    end
+  end
 
     assert_redirected_to posts_path
   end
