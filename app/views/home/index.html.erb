@@ -17,7 +17,7 @@
       <% @posts.each do |post| %>
         <li>
           <%= link_to(post) do %>
-            <h3><%= truncate(post.title, :length => 23) %> <small>posted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.full_name %></small></h3>
+            <h3><%= truncate(post.title, :length => 23) %> <small>posted <%= time_ago_in_words(post.created_at) %> ago by <%= truncate(post.user.full_name, :length => 18) %></small></h3>
           <% end %>
         </li>
       <% end %>
