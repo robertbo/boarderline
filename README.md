@@ -1,4 +1,4 @@
-# BoarderLine v0.2.1
+# BoarderLine v0.2.2
 BoarderLine is a work in progress, and when it is finished it will be an intranet for CCGS boarding.
 
 ## Documentation

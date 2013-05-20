@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.2.2 (May 20, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.2)
+* Created home page
+* Installed font-awesome via CDN
+* Added `gravatar_url` method to user model
+* Changed `edit_user_registration_path` in navbar to `account_path`
+
 ## [v0.2.1 (May 19, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.1)
 * Cleaned up `post_controller_test.rb` to use Shoulda-context
 
