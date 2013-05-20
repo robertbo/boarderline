@@ -11,6 +11,10 @@
   box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);
 }
 
+.home-list > li:hover {
+  background-color: #F5F5F5;
+}
+
 .home-list >li small {
   color: #A1A1A1;
 }
