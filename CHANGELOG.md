@@ -1,5 +1,8 @@
 # Change Log
 
+## [v0.2.3 (May 21, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.3)
+* Removed link to password reset (replaced with note to contact ICT)
+
 ## [v0.2.2 (May 20, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.2)
 * Created home page
 * Installed font-awesome via CDN
