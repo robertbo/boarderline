@@ -16,6 +16,7 @@ gem 'nokogiri'
 # Gems only used for testing
 group :test do
   gem 'shoulda-context'
+  gem 'coveralls', :require => false
   gem 'simplecov', :require => false
 end
 
