@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.2.4 (May 29, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.3)
+* Made BoarderLine open-source
+* Added project to Codeship and added badge
+* Added Code Climate badge
+* Added project to Coveralls and added badge
+
 ## [v0.2.3 (May 21, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.3)
 * Removed link to password reset (replaced with note to contact ICT)
 
