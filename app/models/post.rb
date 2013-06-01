@@ -8,4 +8,6 @@ class Post < ActiveRecord::Base
 
   validates :content, presence: true,
                     length: { minimum: 20 }
+
+  validates :user_id, presence: true
 end
