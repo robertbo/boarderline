@@ -35,7 +35,7 @@
             <p><small><%= link_to "(log out)", logout_path %></small></p>
           </div>
           <div class="span2">
-            <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong></p>
+            <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago <% if current_user.admin %>, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong><% end %></p>
           </div>
         </div>
       <% else %>
