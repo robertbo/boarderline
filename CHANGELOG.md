@@ -1,6 +1,12 @@
 # Change Log
 
-## [v0.2.4 (May 29, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.3)
+## [v0.2.5 (June 1 2013)](https://github.com/davblayn/boarderline/tree/v0.2.5)
+* Created modal on home page
+* Created .center class and rearranged stylesheets
+* Changed "forgot password" note
+* Ignore Zeus socket files
+
+## [v0.2.4 (May 29, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.4)
 * Made BoarderLine open-source
 * Added project to Codeship and added badge
 * Added Code Climate badge
