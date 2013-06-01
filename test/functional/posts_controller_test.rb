@@ -37,16 +37,58 @@ class PostsControllerTest < ActionController::TestCase
     
     should "redirect post update" do
       put :update, id: @post, post: { title: @post.title, content: @post.title }
+      assert_response :redirect
+      assert_redirected_to new_user_session_path
     end
     
-    should "redirect to login page when destroying post" do
+    should "redirect when destroying post" do
       delete :destroy, id: @post
       assert_response :redirect
       assert_redirected_to new_user_session_path
     end
   end
-  
+
   context "when user signed in" do
+    setup do
+      sign_in users(:user1)
+    end
+
+    should "be redirected when visiting new" do
+      get :new
+      assert_response :redirect
+      assert_redirected_to news_path
+      assert !flash[:error].empty?
+    end
+
+    should "be redirected when creating post" do
+      post :create, post: { title: "Boarders are now banned from Claremont leave", content: "Hello, this is a test post for the sake of testing the posts controller" }
+      assert_response :redirect
+      assert_redirected_to news_path
+      assert !flash[:error].empty?
+    end
+
+    should "be redirected when visiting edit" do
+      get :edit, id: @post
+      assert_response :redirect
+      assert_redirected_to news_path
+      assert !flash[:error].empty?
+    end
+
+    should "redirect post update" do
+      put :update, id: @post, post: { title: @post.title, content: @post.title }
+      assert_response :redirect
+      assert_redirected_to news_path
+    end
+
+    should "redirect when destroying post" do
+      delete :destroy, id: @post
+      assert_response :redirect
+      assert_redirected_to news_path
+      assert !flash[:error].empty?
+    end
+  end
+  
+  context "when admin signed in" do
     setup do
       sign_in users(:admin1)
     end

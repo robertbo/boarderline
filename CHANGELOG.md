@@ -1,6 +1,17 @@
 # Change Log
 
-## [v0.2.5 (June 1 2013)](https://github.com/davblayn/boarderline/tree/v0.2.5)
+## [v1.0.0 (June 1, 2013)](https://github.com/davblayn/boarderline/tree/v0.1.0)
+* Added "admin" column to user table
+* Required user to be an admin to
+  * Access `new`
+  * Create a post
+  * Access `edit`
+  * Update a post
+  * Destroy a post
+* Hidden admin links to users who are not admins
+* Fixed bug which allowed posts to be created without a user_id assigned, thus causing a 500 error (refer to issue #34)
+
+## [v0.2.5 (June 1, 2013)](https://github.com/davblayn/boarderline/tree/v0.2.5)
 * Created modal on home page
 * Created .center class and rearranged stylesheets
 * Changed "forgot password" note

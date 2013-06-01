@@ -2,7 +2,7 @@
   <h1><%= @post.title %></h1>
   Posted by <strong><%= @post.user.full_name %></strong>, <%= time_ago_in_words(@post.created_at) %> ago
 
-  <% if user_signed_in? %>
+  <% if user_signed_in? && current_user.admin === true %>
     <span class="pull-right">
       <%= link_to "Edit", edit_post_path %> |
       <%= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?" } %>
