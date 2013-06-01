@@ -1,13 +1,14 @@
 <div class="hero-unit">
   <h1>Welcome to BoarderLine</h1>
-  <p>
     <% if user_signed_in? %>
-      Welcome back, <%= current_user.first_name %>
+      <p>Welcome back, <%= current_user.first_name %></p>
     <% else %>
-      Keep track of what's happening in boarding with BoarderLine. <span class="muted">All you need is a school email address</span></p>
-      <p><%= link_to "Register an account", register_path, :class => "btn btn-primary btn-large" %>
+      <p>Keep track of what's happening in boarding with BoarderLine. <span class="muted">All you need is a school email address</span></p>
+      <p>
+        <%= link_to "Register an account", register_path, :class => "btn btn-primary btn-large" %>
+        <a href="#learn-more" role="button" class="btn btn-large" data-toggle="modal">Learn more</a>
+      </p>
     <% end %>
-  </p>
 </div>
 
 <div class="row">
@@ -61,3 +62,36 @@
     </div>
   </div>
 </div>
+
+<% if !user_signed_in? %>
+<!-- Modal -->
+<div id="learn-more" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Why sign up for BoarderLine?</h3>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="span6 center">
+        <div class="learn-more-div">
+          <span class="icon-stack icon-3x">
+            <i class="icon-circle icon-stack-base"></i>
+            <i class="icon-bullhorn white"></i>
+          </span>
+          <span class="lead">
+            Read boarding announcements
+          </span>
+          <p>
+            All of the announcements for the boarding house can be found in one location
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <%= link_to "Register an account", register_path, :class => "btn btn-primary" %>
+  </div>
+</div>
+<% end %>
