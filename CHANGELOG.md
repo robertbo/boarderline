@@ -1,5 +1,8 @@
 # Change Log
 
+## [v1.0.1 (June 2, 2013)](https://github.com/davblayn/boarderline/tree/v1.0.1)
+* Update `post_controller_test.rb`
+
 ## [v1.0.0 (June 1, 2013)](https://github.com/davblayn/boarderline/tree/v0.1.0)
 * Added "admin" column to user table
 * Required user to be an admin to
