@@ -53,6 +53,12 @@ class PostsControllerTest < ActionController::TestCase
       sign_in users(:user1)
     end
 
+    should "get index" do
+      get :index
+      assert_response :success
+      assert_not_nil assigns(:posts)
+    end
+
     should "be redirected when visiting new" do
       get :new
       assert_response :redirect
@@ -65,6 +71,11 @@ class PostsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to news_path
       assert !flash[:error].empty?
+    end
+
+    should "show post" do
+      get :show, id: @post
+      assert_response :success
     end
 
     should "be redirected when visiting edit" do
@@ -92,6 +103,12 @@ class PostsControllerTest < ActionController::TestCase
     setup do
       sign_in users(:admin1)
     end
+
+    should "get index" do
+      get :index
+      assert_response :success
+      assert_not_nil assigns(:posts)
+    end
     
     should "get new" do
       get :new
@@ -104,6 +121,11 @@ class PostsControllerTest < ActionController::TestCase
       end
   
       assert_redirected_to post_path(assigns(:post))
+    end
+
+    should "show post" do
+      get :show, id: @post
+      assert_response :success
     end
     
     should "create post for current user" do
