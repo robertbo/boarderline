@@ -6,12 +6,12 @@
       <p>Keep track of what's happening in boarding with BoarderLine. <span class="muted">All you need is a school email address</span></p>
       <p>
         <%= link_to "Register an account", register_path, :class => "btn btn-primary btn-large" %>
-        <a href="#learn-more" role="button" class="btn btn-large" data-toggle="modal">Learn more</a>
+        <a href="#learn-more" role="button" class="btn btn-large hidden-phone" data-toggle="modal">Learn more</a>
       </p>
     <% end %>
 </div>
 
-<div class="row">
+<div class="row-fluid">
   <div class="span8">
     <h2>Latest news</h2>
     <% if @posts.empty? %>
@@ -35,15 +35,7 @@
     <div class="well">
       <% if user_signed_in? %>
         <p class="lead">You are currently signed in as <%= current_user.full_name %></p>
-        <div class="row">
-          <div class="span1">
-            <%= image_tag current_user.gravatar_url, :size => "50x50" %>
-            <p><small><%= link_to "(log out)", logout_path %></small></p>
-          </div>
-          <div class="span2">
-            <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago <% if current_user.admin %>, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong><% end %></p>
-          </div>
-        </div>
+          <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago <% if current_user.admin %>, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong><% end %></p>
       <% else %>
         <fieldset>
           <legend>Log in</legend>
@@ -77,7 +69,7 @@
     <h3 id="myModalLabel">Why sign up for BoarderLine?</h3>
   </div>
   <div class="modal-body">
-    <div class="row">
+    <div class="row-fluid">
       <div class="span6 center">
         <div class="learn-more-div">
           <span class="icon-stack icon-3x">
