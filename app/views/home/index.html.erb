@@ -14,15 +14,21 @@
 <div class="row">
   <div class="span8">
     <h2>Latest news</h2>
-    <ul class="home-list">
-      <% @posts.each do |post| %>
-        <li>
-          <%= link_to(post) do %>
-            <h3><%= truncate(post.title, :length => 23) %> <small>posted <%= time_ago_in_words(post.created_at) %> ago by <%= truncate(post.user.full_name, :length => 18) %></small></h3>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+    <% if @posts.empty? %>
+      <p>
+        There isn't any news to display
+      </p>
+    <% else %>
+      <ul class="home-list">
+        <% @posts.each do |post| %>
+          <li>
+            <%= link_to(post) do %>
+              <h3><%= truncate(post.title, :length => 23) %> <small>posted <%= time_ago_in_words(post.created_at) %> ago by <%= truncate(post.user.full_name, :length => 18) %></small></h3>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
   
   <div class="span4">
