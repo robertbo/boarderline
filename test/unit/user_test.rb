@@ -40,4 +40,13 @@ class UserTest < ActiveSupport::TestCase
       assert user.errors[:email].empty?
     end
   end
+
+  context "gravatar url" do
+    should "equal MD5 hash of user's email address" do
+      user = User.new
+      user.email = "test@ccgs.wa.edu.au"
+
+      assert_equal user.gravatar_url, "http://gravatar.com/avatar/e58c2801e6445a1cbaf57009fda7be3a?r=g&d=mm"
+    end
+  end
 end
