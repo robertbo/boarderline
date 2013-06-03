@@ -11,7 +11,7 @@
     <% end %>
 </div>
 
-<div class="row">
+<div class="row-fluid">
   <div class="span8">
     <h2>Latest news</h2>
     <% if @posts.empty? %>
@@ -35,15 +35,7 @@
     <div class="well">
       <% if user_signed_in? %>
         <p class="lead">You are currently signed in as <%= current_user.full_name %></p>
-        <div class="row">
-          <div class="span1">
-            <%= image_tag current_user.gravatar_url, :size => "50x50" %>
-            <p><small><%= link_to "(log out)", logout_path %></small></p>
-          </div>
-          <div class="span2">
-            <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago <% if current_user.admin %>, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong><% end %></p>
-          </div>
-        </div>
+          <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago <% if current_user.admin %>, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong><% end %></p>
       <% else %>
         <fieldset>
           <legend>Log in</legend>
@@ -77,7 +69,7 @@
     <h3 id="myModalLabel">Why sign up for BoarderLine?</h3>
   </div>
   <div class="modal-body">
-    <div class="row">
+    <div class="row-fluid">
       <div class="span6 center">
         <div class="learn-more-div">
           <span class="icon-stack icon-3x">
