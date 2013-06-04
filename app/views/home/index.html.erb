@@ -34,7 +34,7 @@
     <div class="well">
       <% if user_signed_in? %>
         <p class="lead">You are currently signed in as <%= current_user.full_name %></p>
-          <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago <% if current_user.admin %>, and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong><% end %></p>
+          <p>You registered for BoarderLine <%= time_ago_in_words(current_user.created_at) %> ago <% if current_user.admin %> and since then you have made <strong><%= pluralize(current_user.posts.count, "news post") %></strong><% end %></p>
       <% else %>
         <fieldset>
           <legend>Log in</legend>
