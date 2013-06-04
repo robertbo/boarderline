@@ -1,4 +1,4 @@
-<div class="hero-unit">
+<div class="hero-unit hidden-phone">
   <h1>Welcome to BoarderLine</h1>
     <% if user_signed_in? %>
       <p>Welcome back, <%= current_user.first_name %></p>
@@ -9,6 +9,18 @@
       </p>
     <% end %>
 </div>
+
+<% if !user_signed_in? %>
+  <div class="well visible-phone">
+    <p class="lead">
+      Welcome to BoarderLine
+    </p>
+    <p class="text-center">
+      <%= link_to "Register", register_path, :class => "btn btn-primary" %>
+      <%= link_to "Log in", login_path, :class => "btn" %>
+    </p>
+  </div>
+<% end %>
 
 <div class="row-fluid">
   <div class="span8">
