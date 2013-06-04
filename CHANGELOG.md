@@ -1,5 +1,13 @@
 # Change Log
 
+## [v1.2.0 (June 4, 2013)](https://github.com/davblayn/boarderline/tree/v1.2.0)
+* Updated home page
+  * Removed modal
+  * Displayed a "no news" message when there is no news to display
+* Updated the gravatar_url method and wrote a test for it in `user_test.rb`
+* Made BoarderLine responsive
+* Changed navbar so it is not fixed to the top of the screen
+
 ## [v1.0.1 (June 2, 2013)](https://github.com/davblayn/boarderline/tree/v1.0.1)
 * Update `post_controller_test.rb`
 
