@@ -7,14 +7,14 @@
         <div class="form-inputs">
           <fieldset>
             <legend>Your name</legend>
-            <%= f.input :first_name, :required => true, :autofocus => true %>
-            <%= f.input :last_name, :required => true %>
+            <%= f.input :first_name, :required => true, :autofocus => true, :input_html => { :class => 'input-block-level' } %>
+            <%= f.input :last_name, :required => true, :input_html => { :class => 'input-block-level' } %>
           </fieldset>
           <fieldset>
             <legend>Your login details</legend>
-            <%= f.input :email, :required => true, :input_html => { :placeholder => "School email address" } %>
-            <%= f.input :password, :required => true %>
-            <%= f.input :password_confirmation, :required => true %>
+            <%= f.input :email, :required => true, :input_html => { :placeholder => "School email address", :class => 'input-block-level' } %>
+            <%= f.input :password, :required => true, :input_html => { :class => 'input-block-level' } %>
+            <%= f.input :password_confirmation, :required => true, :input_html => { :class => 'input-block-level' } %>
           </fieldset>
         </div>
       
