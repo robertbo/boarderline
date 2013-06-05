@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.2.1 (June 5, 2013)](https://github.com/davblayn/boarderline/tree/1.2.1)
+* Updated authentication pages for mobile
+* Updated home page for mobile
+
 ## [v1.2.0 (June 4, 2013)](https://github.com/davblayn/boarderline/tree/v1.2.0)
 * Updated home page
   * Removed modal
