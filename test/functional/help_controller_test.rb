@@ -2,6 +2,11 @@ require 'test_helper'
 
 class HelpControllerTest < ActionController::TestCase
   context "when not signed in" do
+    should "get index" do
+      get :index
+      assert_response :success
+    end
+
     should "get markdown" do
       get :markdown
       assert_response :success
@@ -18,6 +23,11 @@ class HelpControllerTest < ActionController::TestCase
       sign_in users(:user1)
     end
 
+    should "get index" do
+      get :index
+      assert_response :success
+    end
+
     should "get markdown" do
       get :markdown
       assert_response :success
@@ -32,6 +42,11 @@ class HelpControllerTest < ActionController::TestCase
   context "when admin signed in" do
     setup do
       sign_in users(:admin1)
+    end
+
+    should "get index" do
+      get :index
+      assert_response :success
     end
 
     should "get markdown" do

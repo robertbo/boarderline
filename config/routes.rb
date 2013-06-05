@@ -2,7 +2,7 @@ Boarderline::Application.routes.draw do
   get "home/index"
 
   devise_for :users
-  
+
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
@@ -10,6 +10,7 @@ Boarderline::Application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy', as: :logout, method: :destroy
   end
 
+  get 'help', to: 'help#index', as: :help
   get 'help/markdown', to: 'help#markdown', as: :markdown_help
   get 'help/welcome', to: 'help#welcome', as: :welcome_help
 
