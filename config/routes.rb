@@ -13,6 +13,7 @@ Boarderline::Application.routes.draw do
   get 'help', to: 'help#index', as: :help
   get 'help/markdown', to: 'help#markdown', as: :markdown_help
   get 'help/welcome', to: 'help#welcome', as: :welcome_help
+  get 'help/news', to: 'help#news', as: :news_help
 
   root :to => "home#index"
   get 'news', to:'posts#index', as: :news

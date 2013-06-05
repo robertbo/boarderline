@@ -7,4 +7,7 @@ class HelpController < ApplicationController
 
   def welcome
   end
+
+  def news
+  end
 end
