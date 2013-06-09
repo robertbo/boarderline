@@ -7,6 +7,9 @@
     <p>The news system on BoarderLine allows boarding staff to post announcements that can be read by students. These announcements can be formatted using <%= link_to "Markdown", markdown_help_path %>. News posts are printer-friendly so a paper copy of any given announcement can be posted in the boarding house</p>
 
     <% if user_signed_in? && current_user.admin? %>
+      <p>You can create a news post <%= link_to "here", new_post_path %>, news posts can be formatted using Markdown, for instructions on using Markdown you can read <%= link_to "this reference", markdown_help_path %> on BoarderLine help, or you can read a more detailed documentation <a href="http://daringfireball.net/projects/markdown/syntax">here</a>.</p>
+
+      <p>Any logged in staff member can edit or delete any news post, but students cannot edit or delete news posts. The edited news post will still be attributed to the original staff member who posted the news post, so please make edits to posts only when appropriate.</p>
     <% else %>
       <div class="alert alert-info">
         You must be an admin to read the rest of this help article
