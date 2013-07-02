@@ -1,0 +1,62 @@
+.hero-unit.hidden-phone
+  %h1 Welcome to BoarderLine
+  - if user_signed_in?
+    %p Welcome back, #{current_user.first_name}
+  - else
+    %p
+      Keep track of what's happening in boarding with BoarderLine.
+      %span.muted All you need is a school email address
+
+    %p= link_to "Register an account", register_path, :class => "btn btn-primary btn-large"
+
+- if !user_signed_in?
+  .well.visible-phone
+    %p.lead Welcome to BoarderLine
+    %p.text-center
+      = link_to "Register", register_path, :class => "btn btn-primary"
+      = link_to "Log in", login_path, :class => "btn"
+
+.row-fluid
+  .span8
+    %h2 Latest news
+    - if @posts.empty?
+      %p There isn't any news to display
+    - else
+      %ul.home-list
+        - @posts.each do |post|
+          %li
+            = link_to(post) do
+              %h3
+                = truncate(post.title, :length => 23)
+                %small
+                  posted #{time_ago_in_words(post.created_at)} ago by #{truncate(post.user.full_name, :length => 18)}
+
+  .span4
+    .well.hidden-phone
+      - if user_signed_in?
+        %p.lead
+          You are currently signed in as #{current_user.full_name}
+        %p
+          You registered for BoarderLine #{time_ago_in_words(current_user.created_at)} ago
+          - if current_user.admin
+            and since then you have made #{pluralize(current_user.posts.count, "news post")}
+      - else
+        %fieldset
+          %legend Log in
+          = simple_form_for("user", :url => user_session_path) do |f|
+            = f.input :email, :input_html => { :class => 'input-block-level' }
+            = f.input :password, :input_html => { :class => 'input-block-level' }
+            = f.button :submit, "Log in", :class => "btn-primary"
+
+      %h2 CCGS websites
+      %ul.nav.nav-pills.nav-stacked
+        %li
+          %a(href="http://ccgs.wa.edu.au") CCGS Homepage
+        %li
+          %a(href="http://intranet.ccgs.wa.edu.au") Intranet
+        %li
+          %a(href="http://tartarus.ccgs.wa.edu.au") Tartarus
+        %li
+          %a(href="http://arcadia.ccgs.wa.edu.au") Arcadia
+        %li
+          %a(href="http://mail.student.ccgs.wa.edu.au") Student mail
