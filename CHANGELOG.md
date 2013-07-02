@@ -1,5 +1,9 @@
 # Change Log
 
+## [v1.2.2 (July 2, 2013)](https://github.com/davblayn/boarderline/tree/v1.2.2)
+* Updated help system
+* Created article in help system about 
+
 ## [v1.2.1 (June 5, 2013)](https://github.com/davblayn/boarderline/tree/v1.2.1)
 * Updated authentication pages for mobile
 * Updated home page for mobile
