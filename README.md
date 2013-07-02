@@ -9,5 +9,21 @@ BoarderLine is a work in progress, and when it is finished it will be an intrane
 ## Documentation
 Documentation will be in the application in a help system, more advanced documentation for the management of the system will be provided in the form of a hard-copy to ICT Services.
 
-## License
-BoarderLine is licensed under the Apache License, Version 2.0. The full license can be read [here](http://opensource.org/licenses/Apache-2.0), or the shorter plain english version can be found [here](http://www.tldrlegal.com/l/APACHE2)
+## Copyright
+### tl;dr
+BoarderLine is available under the Apache License, Version 2.0. A human-readable version of the license can be found [here](http://www.tldrlegal.com/l/APACHE2)
+
+### Actual license
+Copyright 2013 David Blayney
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   <http://www.apache.org/licenses/LICENSE-2.0>
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
