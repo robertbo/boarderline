@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.13'
 
@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'simple_form'
 gem 'devise'
+gem 'haml'
 
 gem 'redcarpet', '1.17.2'
 gem 'albino'
