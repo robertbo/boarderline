@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BoarderLine</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Font-awesome via CDN -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <%= link_to "BoarderLine", root_path, :class => "brand" %>
+
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "News", news_path %></li>
+            <li><%= link_to "Help", help_path %></li>
+          </ul>
+          
+          <ul class="nav pull-right">
+            <% if user_signed_in? %>
+              <li><%= link_to current_user.full_name, account_path %>
+              <li><%= link_to "Log out", logout_path %>
+            <% else %>
+              <li><%= link_to "Log in", login_path %></li>
+              <li><%= link_to "Register", register_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <% flash.each do |type, message| %>
+      <div class="alert <%= flash_class type %>">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= message %>
+      </div>
+    <% end %>
+    
+    <%= yield %>
+
+    <footer>
+      BoarderLine <span class="muted">v1.3.0</span><br />
+      Developed by <a href="http://davblayn.com">David Blayney</a> using the <a href="http://rubyonrails.org">Ruby on Rails</a> framework
+    </footer>
+  </div>
+</body>
+</html>
