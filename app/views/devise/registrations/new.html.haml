@@ -1,0 +1,25 @@
+.row-fluid
+  .span4
+    .well
+      = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+        = f.error_notification
+
+        .form-inputs
+          %fieldset
+            %legend Your name
+            = f.input :first_name, :required => true, :autofocus => true, :input_html => { :class => 'input-block-level' }
+            = f.input :last_name, :required => true, :input_html => { :class => 'input-block-level' }
+
+          %fieldset
+            %legend Your login details
+            = f.input :email, :required => true, :input_html => { :placeholder => "School email address", :class => 'input-block-level' }
+            = f.input :password, :required => true, :input_html => { :class => 'input-block-level' }
+            = f.input :password_confirmation, :required => true, :input_html => { :class => 'input-block-level' }
+
+          .form-actions
+            = f.button :submit, "Register", :class => "btn-primary"
+
+  .span8.hidden-phone
+    %h1 Register for BoarderLine
+    %p.lead Registering for BoarderLine is easy and secure, all you need is a school email address
+    %p By registering for BoarderLine, you will be able to post ideas to our feedback system. New features are coming soon. Please read #{link_to "this article in the help center", welcome_help_path} before registering for an account.
