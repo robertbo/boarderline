@@ -1,0 +1,50 @@
+!!!
+%html
+  %head
+    %title BoarderLine
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+    / Viewport
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    / Font-awesome via CDN
+    %link(href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet")
+
+  %body
+    .navbar
+      .navbar-inner
+        .container-fluid
+          %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+          = link_to "BoarderLine", root_path, :class => "brand"
+
+          .nav-collapse.collapse
+            %ul.nav
+              %li= link_to "Home", root_path
+              %li= link_to "News", news_path
+              %li= link_to "Help", help_path
+
+            %ul.nav.pull-right
+              - if user_signed_in?
+                %li= link_to current_user.full_name, account_path
+                %li= link_to "Log out", logout_path
+              - else
+                %li= link_to "Log in", login_path
+                %li= link_to "Register", register_path
+
+    .container-fluid
+      - flash.each do |type, message|
+        %div{:class => "alert #{flash_class type}"}
+          %button(type="button" class="close" data-dismiss="alert") &times;
+          = message
+
+      = yield
+
+      %footer
+        BoarderLine <span class="muted">v1.2.2</span><br />
+        Developed by <a href="http://davblayn.com">David Blayney</a> using the <a href="http://rubyonrails.org">Ruby on Rails</a> framework
