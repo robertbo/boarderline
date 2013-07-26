@@ -5,7 +5,7 @@ class CreateIdeas < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.text :response
-      t.text :status
+      t.string :status
 
       t.timestamps
     end
